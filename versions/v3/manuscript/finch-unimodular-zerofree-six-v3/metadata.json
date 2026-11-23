@@ -1,0 +1,15 @@
+{
+  "id": "finch-unimodular-zerofree-six",
+  "revision": 3,
+  "problem_ids": ["finch-unimodular-zerofree-six"],
+  "topic": "Finch's nonexistence conjecture for order-six unimodular zerofree matrices with alpha=beta=3",
+  "title": "Extending Towse–Campbell's rank-one constructions: a counterexample to Finch's balanced order-six conjecture",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "Extending Towse and Campbell's integer rank-one constructions (2016, Section 2, Theorem 1 and Corollaries 1–2) to the zerofree setting, we refute Finch's Conjecture 4 in Small Matrices with Small Inverses: Unimodular Zerofree Cases (arXiv:2605.03691v4, June 12, 2026, Section 5, p. 7) by constructing a positive integral matrix of order six with determinant -1, no zero entry in either it or its inverse, and maximum absolute entry 3 in both. A diagonal sign matrix plus a rank-one matrix gives the construction. Every even order at least two admits such a positive matrix with any prescribed common maximum at least three; every odd order at least three admits one with common maximum three. We also give positive order-six examples with maxima (3,4) and (3,5), and identify the parts of Finch's extremal conjecture covered by his later bounds.",
+  "summary": "An explicit order-six counterexample to Finch's Conjecture 4; a written characterization of unimodularity in diag(s_1,...,s_n)+cJ for n>=2 and c>=2; positive six-dimensional examples for (alpha,beta)=(3,4),(3,5); and attribution of the k>=3 order-three and order-four extremal equalities to Finch's later bounds.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/3ede1d0bfa6d3c063b82234699d279136b6f0c42/D5/S3/QuadraticForms/FinchBalancedZerofreeRefutation.lean"
+}

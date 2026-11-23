@@ -1,0 +1,75 @@
+{
+  "status": "pass",
+  "arithmetic": "Exact integers and fractions.Fraction; no floating-point operations.",
+  "displayed_example": {
+    "order": 6,
+    "det_A": -1,
+    "det_B": -1,
+    "alpha": 3,
+    "beta": 3,
+    "zero_entries_A": 0,
+    "zero_entries_B": 0,
+    "AB": "I_6",
+    "BA": "I_6",
+    "inverse_by_elimination": "B"
+  },
+  "neighbouring_examples": [
+    {
+      "order": 6,
+      "det_matrix": 1,
+      "det_inverse": 1,
+      "alpha": 3,
+      "beta": 4,
+      "zero_entries": 0,
+      "products": "Both I_6",
+      "inverse_by_elimination": "Matches displayed inverse"
+    },
+    {
+      "order": 6,
+      "det_matrix": 1,
+      "det_inverse": 1,
+      "alpha": 3,
+      "beta": 5,
+      "zero_entries": 0,
+      "products": "Both I_6",
+      "inverse_by_elimination": "Matches displayed inverse"
+    }
+  ],
+  "latex_matrix_data": "All six displayed matrices agree entrywise with the witness data.",
+  "cited_extremal_families": {
+    "source": "Finch, arXiv:2605.03691v4, Section 9, page 12, matrices U and V.",
+    "heights_inclusive": [
+      3,
+      20
+    ],
+    "cases": 36,
+    "scope": "Exact finite checks of the cited lower-bound examples; upper bounds are the cited theorems."
+  },
+  "family_sign_count_cases": {
+    "orders_inclusive": [
+      2,
+      12
+    ],
+    "constants_inclusive": [
+      2,
+      8
+    ],
+    "sign_counts": "Every positive-sign count from 0 through n; positive signs first.",
+    "cases": 616,
+    "unimodular_cases": 47
+  },
+  "family_all_sign_cases": {
+    "orders_inclusive": [
+      2,
+      8
+    ],
+    "constants_inclusive": [
+      2,
+      4
+    ],
+    "sign_vectors": "Every element of {-1,1}^n.",
+    "cases": 1524,
+    "unimodular_cases": 342
+  },
+  "scope": "Finite exact checks of the displayed matrices and stated ranges. The all-order result follows from the written determinant and inverse identities."
+}

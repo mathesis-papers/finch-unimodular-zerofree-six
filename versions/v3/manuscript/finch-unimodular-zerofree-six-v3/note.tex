@@ -1,0 +1,354 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\DeclareMathOperator{\diag}{diag}
+\title{Extending Towse--Campbell's rank-one constructions:\\
+a counterexample to Finch's balanced order-six conjecture}
+\author{Haobo Ma\textsuperscript{1} \and Wenlin Zhang\textsuperscript{2,1}}
+\date{November 16, 2026}
+\begin{document}
+\maketitle
+\begin{center}
+\small
+\textsuperscript{1}ChronoAI Pte Ltd, Singapore\\
+\textsuperscript{2}National University of Singapore, Singapore
+\end{center}
+\begin{abstract}
+Extending Towse and Campbell's integer rank-one constructions
+(2016, Section 2, Theorem 1 and Corollaries 1--2) to the zerofree setting,
+we refute Finch's Conjecture 4 in \emph{Small Matrices with Small Inverses:
+Unimodular Zerofree Cases} (arXiv:2605.03691v4, June 12, 2026,
+Section 5, p.~7) by constructing
+a positive integral matrix of order six with determinant $-1$, no zero
+entry in either it or its inverse, and maximum absolute entry $3$ in both.
+A diagonal sign matrix
+plus a rank-one matrix gives the construction. Every even order at least two admits such
+a positive matrix with any prescribed common maximum at least three;
+every odd order at least three admits one with common maximum three.
+We also give positive order-six examples with maxima $(3,4)$ and $(3,5)$,
+and identify the parts of Finch's extremal conjecture covered by his later bounds.
+\end{abstract}
+
+\section{A rank-one family}
+For an integer matrix $M=(m_{ij})$ of order $n$, write
+\[
+ \alpha(M)=\max_{1\leq i,j\leq n}|m_{ij}|,
+ \qquad
+ \beta(M)=\max_{1\leq i,j\leq n}|(M^{-1})_{ij}|.
+\]
+Here $\beta(M)$ is used only when $M$ is invertible. Following Finch
+\cite[pp.~1--2]{finch}, $M$ is \emph{unimodular} if
+$\det M\in\{1,-1\}$ and \emph{zerofree} if both $M$ and $M^{-1}$
+have no zero entries. A balanced matrix has $\alpha(M)=\beta(M)$.
+Positivity below refers to the entries of the displayed matrix, without
+selecting a canonical representative.
+Finch's Conjecture 4 states: ``No $6\times6$ matrices exist that are
+tied to $\alpha=\beta=3$.''
+The following family supplies counterexamples without an enumeration
+of equivalence classes.
+Towse and Campbell \cite[Section 2, Theorem 1 and Corollaries 1--2]{towse}
+record the integer rank-one determinant and inverse identities for
+$P=I+\mathbf u\mathbf v^{\mathsf T}$, including the orthogonal
+and involutory cases $\mathbf v^{\mathsf T}\mathbf u=0,-2$;
+they attribute the orthogonal construction to Ortega.
+The inverse identity is also the Sherman--Morrison formula; see
+Higham \cite[``Sherman--Morrison Formula'']{higham}.
+The diagonal-sign specialization below gives positivity, zerofreeness and equal
+prescribed entry maxima, conclusions not stated in \cite{towse}.
+The rank-one identities themselves are the cited prior method.
+We give the determinant and inverse calculations in full.
+
+Let $\mathbf e=(1,\ldots,1)^{\mathsf T}\in\mathbb Z^n$ and
+$J=\mathbf e\mathbf e^{\mathsf T}$. For signs
+$s_1,\ldots,s_n\in\{1,-1\}$ put
+\[
+ D=\diag(s_1,\ldots,s_n),\qquad
+ \mathbf s=D\mathbf e,\qquad
+ \delta=\sum_{i=1}^n s_i.
+\]
+Our family specializes Towse and Campbell's construction with
+$\mathbf u=c\mathbf s$, $\mathbf v=\mathbf e$ and $A=DP$.
+The inner product is $\mathbf v^{\mathsf T}\mathbf u=c\delta$,
+so the two unimodular branches below correspond to $0$ and $-2$.
+
+\begin{theorem}\label{thm:family}
+Let $n\geq2$ and let $c\geq2$ be an integer. The positive integer
+matrix $A=D+cJ$ is unimodular if and only if
+\[
+ \delta=0\quad\hbox{or}\quad(c,\delta)=(2,-1).
+\]
+In either case $A$ is zerofree and
+$\alpha(A)=\beta(A)=c+1$. More explicitly,
+\begin{align}
+ \det A&=\det(D)(1+c\delta),\label{eq:det}\\
+ A^{-1}&=D-\frac{c}{1+c\delta}\,
+               \mathbf s\mathbf s^{\mathsf T}.\label{eq:inverse}
+\end{align}
+Formula \eqref{eq:inverse} also holds without unimodularity.
+\end{theorem}
+
+\begin{proof}
+Since $D^2=I$, one has
+$A=D(I+c\mathbf s\mathbf e^{\mathsf T})$.
+Expand the determinant of the second factor by multilinearity in its
+columns. A term using two columns from
+$c\mathbf s\mathbf e^{\mathsf T}$ is zero because those columns
+are proportional. The term using none is $1$, and the term using
+only column $i$ is $cs_i$. This proves \eqref{eq:det}.
+Because $c\geq2$ and $\delta$ is an integer, $1+c\delta\ne0$.
+Moreover, $|\det A|=1$ is equivalent to
+$1+c\delta\in\{1,-1\}$, that is, $c\delta=0$ or $c\delta=-2$.
+These are precisely the two alternatives in the statement.
+
+For the inverse, use
+$D\mathbf s=\mathbf e$,
+$\mathbf e^{\mathsf T}D=\mathbf s^{\mathsf T}$, and
+$\mathbf e^{\mathsf T}\mathbf s=\delta$ to obtain
+\[
+ (D+c\mathbf e\mathbf e^{\mathsf T})
+ \left(D-\frac{c}{1+c\delta}\mathbf s\mathbf s^{\mathsf T}\right)
+ = I+\left(c-\frac{c+c^2\delta}{1+c\delta}\right)
+               \mathbf e\mathbf s^{\mathsf T}=I.
+\]
+This proves \eqref{eq:inverse}.
+
+The off-diagonal entries of $A$ equal $c$, and its diagonal entries
+are $c+s_i\geq1$. Under either admissible alternative both signs
+occur: $\delta=0$ requires equal positive and negative counts, while
+$\delta=-1$ with $n\geq2$ requires odd $n\geq3$ and at least one
+positive sign. Thus $\alpha(A)=c+1$.
+If $\delta=0$, the off-diagonal entries of $A^{-1}$ have absolute
+value $c$ and its diagonal entries are $s_i-c$, whose absolute
+values are $c-1$ and $c+1$. If $(c,\delta)=(2,-1)$, then
+$A^{-1}=D+2\mathbf s\mathbf s^{\mathsf T}$: its off-diagonal
+entries have absolute value $2$ and its diagonal entries are
+$s_i+2\in\{1,3\}$. Both inverses are integral and zerofree,
+with the asserted maximum.
+\end{proof}
+
+\begin{corollary}\label{cor:orders}
+For every even $n\geq2$ and every integer $k\geq3$, a positive
+unimodular zerofree matrix exists with $\alpha=\beta=k$.
+For every odd $n\geq3$, one exists with $\alpha=\beta=3$.
+\end{corollary}
+\begin{proof}
+For $n=2m$, take $m$ positive and $m$ negative signs and $c=k-1$.
+For $n=2m+1\geq3$, take $m$ positive and $m+1$ negative signs
+and $c=2$. Apply Theorem~\ref{thm:family}.
+\end{proof}
+
+\section{The six-dimensional counterexample}
+Take $D=\diag(1,1,1,-1,-1,-1)$ and $c=2$. Then
+\begin{align*}
+ A&=\begin{pmatrix}
+ 3&2&2&2&2&2\\
+ 2&3&2&2&2&2\\
+ 2&2&3&2&2&2\\
+ 2&2&2&1&2&2\\
+ 2&2&2&2&1&2\\
+ 2&2&2&2&2&1
+ \end{pmatrix},&
+ B&=\begin{pmatrix}
+ -1&-2&-2&2&2&2\\
+ -2&-1&-2&2&2&2\\
+ -2&-2&-1&2&2&2\\
+ 2&2&2&-3&-2&-2\\
+ 2&2&2&-2&-3&-2\\
+ 2&2&2&-2&-2&-3
+ \end{pmatrix}.
+\end{align*}
+Theorem~\ref{thm:family} gives $B=A^{-1}$ and
+$\det A=(-1)^3=-1$. All entries of $A$ are in $\{1,2,3\}$;
+all entries of $B$ are in $\{-3,-2,-1,2\}$. Both contain an
+entry of absolute value $3$ and neither contains zero. Thus
+Conjecture 4 is refuted; its nonexistence assertion is replaced by
+the existence statement in Corollary~\ref{cor:orders}.
+
+Finch identifies matrices up to $M\mapsto PMQ$, where $P,Q$ are
+signed-permutation matrices \cite[p.~2]{finch}. Such multiplication
+only permutes and changes signs of entries, and
+$(PMQ)^{-1}=Q^{-1}M^{-1}P^{-1}$. Consequently unimodularity,
+zerofreeness, $\alpha$ and $\beta$ are preserved. In particular,
+the canonical representative of the orbit of $A$ is also a
+counterexample; no choice of representative changes the conclusion.
+
+\section{Two neighbouring six-dimensional cases}
+Finch writes in \cite[Section 8, p.~11]{finch}:
+``Results for the cases $(6,3,4)$ and $(6,3,5)$''.
+Here the triples specify $(n,\alpha,\beta)$. The following examples supply
+existence in both cases, rather than an enumeration of their orbits.
+
+\begin{corollary}\label{cor:neighbours}
+There are positive unimodular zerofree matrices of order six with
+$(\alpha,\beta)=(3,4)$ and $(3,5)$, respectively.
+\end{corollary}
+\begin{proof}
+Consider the following two pairs:
+\begin{align*}
+ C_4&=\begin{pmatrix}
+ 1&3&1&3&2&1\\1&2&1&1&1&1\\2&3&2&3&3&2\\
+ 1&1&3&2&2&2\\1&2&2&3&2&1\\1&2&2&3&3&2
+ \end{pmatrix},&
+ E_4&=\begin{pmatrix}
+ 1&-2&2&1&-1&-2\\-1&2&-1&-1&1&1\\-2&2&-1&-1&2&1\\
+ 3&-3&1&2&-2&-2\\-4&3&-1&-3&3&3\\4&-3&1&3&-4&-2
+ \end{pmatrix},\\[4pt]
+ C_5&=\begin{pmatrix}
+ 2&3&1&2&2&1\\1&2&1&3&2&1\\1&1&1&1&1&1\\
+ 2&2&1&1&3&1\\1&1&3&3&3&2\\1&1&3&2&2&2
+ \end{pmatrix},&
+ E_5&=\begin{pmatrix}
+ 3&-4&3&-2&5&-5\\-1&2&-2&1&-3&3\\2&-2&-1&-1&2&-1\\
+ 1&-1&1&-1&2&-2\\-1&1&-1&1&-1&1\\-4&4&1&2&-5&4
+ \end{pmatrix}.
+\end{align*}
+Integer multiplication gives $C_jE_j=E_jC_j=I_6$ for $j=4,5$.
+Taking determinants proves $\det C_j\in\{1,-1\}$, since both factors
+are integers; in fact both determinants are $1$.
+The displayed entries give $\alpha(C_j)=3$, $\alpha(E_j)=j$,
+and show that neither matrix has a zero entry. Thus $E_j=C_j^{-1}$
+has all the required properties.
+\end{proof}
+
+\section{Relation to Finch's other results}
+Finch's related paper \cite[Sections 2--7]{roots} studies minimizing
+$\max\{\alpha,\beta\}$ and lists explicit examples in small
+orders. The construction above instead fixes the common maximum.
+For example, the odd-order construction with $n=3$ gives Finch's
+balanced matrix from \cite[Section 2, p.~3]{finch}, after moving
+the positive sign to the third position. The formulas do not
+enumerate signed-permutation orbits.
+In particular, Corollary~\ref{cor:orders} supplies balanced height-three
+examples in order ten and every larger order. This gives existence
+beyond the examples in \cite[Addendum I, p.~15]{roots}, while leaving
+the minimum-height and orbit-count questions separate.
+
+Let $\gamma_n(k)$ be the largest inverse-entry maximum among unimodular
+zerofree matrices of order $n$ with $\alpha=k$, as in
+\cite[Section 9, p.~11]{finch}. The finite set of integer matrices with
+entries of absolute value at most $k$ makes this a maximum whenever
+the defining set is nonempty.
+Corollary~\ref{cor:orders} immediately yields the following bounds.
+\begin{corollary}\label{cor:gamma}
+For $m\geq1$ and $k\geq3$ one has $\gamma_{2m}(k)\geq k$;
+for $m\geq1$ one has $\gamma_{2m+1}(3)\geq3$.
+\end{corollary}
+\begin{proof}
+The matrices in Corollary~\ref{cor:orders} belong to the defining sets
+and have the indicated inverse-entry maxima.
+\end{proof}
+
+Two equalities conjectured in \cite[Conjecture 6, p.~11]{finch} are already
+consequences of Finch's later bounds, first released July 8, 2026,
+rather than new conclusions here:
+\begin{equation}\label{eq:prior}
+ \gamma_3(k)=k(2k-1),\qquad
+ \gamma_4(k)=k(2k-1)(2k+1)\qquad(k\geq3).
+\end{equation}
+Indeed, \cite[Appendix 5.2, p.~17; Theorem (ii), p.~2]{large}
+bounds the inverse-entry maximum by these expressions for all
+unimodular matrices of the respective orders, even allowing zero entries.
+The zerofree matrices $U,V$ in \cite[Section 9, p.~12]{finch}
+attain the respective bounds for every $k\geq3$.
+Restricting the upper bounds to the zerofree subclass and using these
+lower-bound examples proves \eqref{eq:prior}.
+The exceptional cases $\gamma_3(2)=5$ and $\gamma_4(2)=26$, and the
+order-five and order-six parts of Conjecture 6, require separate arguments.
+
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.44\linewidth}p{0.51\linewidth}@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+\cite[Section 2, Theorem 1; Corollaries 1--2]{towse}
+& Prior proof cited: rank-one determinant and inverse identities,
+including the zero and $-2$ inner-product branches. The zerofree
+height conclusions are the specialization proved here.\\[3pt]
+Conjecture 4, Section 5, p.~7 & Refuted and corrected by an explicit
+matrix; Corollary~\ref{cor:orders} gives an even-order extension.\\[3pt]
+Balanced examples in Sections 1--4, 6 & Not posed; proved: every order $n\geq2$
+admits common maximum $3$; the order-three example is recovered.
+Orbit counts are not covered.\\[3pt]
+Conjectures 1, 2, 3, pp.~3--5 & Not covered: their hypotheses
+require $\alpha=2$, unlike this family.\\[3pt]
+Propositions 0 and 5, pp.~1, 9 & Prior proofs cited in \cite{finch};
+the lower bound $\alpha,\beta\geq2$ and
+the order-two count $2\varphi(k)-1$ are not
+derived here.\\[3pt]
+Section 8, p.~11, $(6,3,4)$, $(6,3,5)$ & Answered: yes for existence,
+by Corollary~\ref{cor:neighbours}; orbit counts not covered.\\[3pt]
+Section 7, p.~9; Section 9, p.~12 & Not covered: improvements to the
+large order-seven or order-six cofactors requested there.\\[3pt]
+Conjecture 6, Section 9, p.~11 & Prior proof cited: Finch \cite{large}
+implies \eqref{eq:prior}, for $k\geq3$. Exceptional $k=2$ cases and
+orders five and six not covered. Corollary~\ref{cor:gamma} gives
+additional lower bounds, not extremal equalities.\\[3pt]
+\cite[Sections 2--6; Addendum I, p.~15]{roots}; MSE \cite{mse}
+& Prior constructions cited: small-height and order-nine examples.
+Not posed; proved: balanced height-three existence in order ten and above.
+Minimum height and complete orbit classification are not covered.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Verification scope}
+The Lean file
+\href{https://github.com/the-omega-institute/trureturing/blob/3ede1d0bfa6d3c063b82234699d279136b6f0c42/D5/S3/QuadraticForms/FinchBalancedZerofreeRefutation.lean}{\texttt{FinchBalancedZerofreeRefutation.lean}}
+declares \texttt{result} in namespace\\
+\texttt{Trureturing.OpenProblems.FinchUnimodularZerofree}.\\
+It refutes \texttt{claim}, the integral order-six nonexistence assertion
+with unit determinant, zerofreeness and entrywise maxima
+$\alpha=\beta=3$, using $A,B$ and Mathlib's nonsingular inverse.
+The all-order family and its corollaries have written proofs;
+\eqref{eq:prior} follows from the cited results.
+Corollary~\ref{cor:neighbours} gives finite integer certificates.
+The accompanying \texttt{verify.py} checks all three inverse pairs and
+finite family instances with exact rational arithmetic, with ranges
+in its output. Lean coverage is the balanced order-six example alone.
+
+\begin{thebibliography}{9}
+\bibitem{finch}
+Steven Finch, \emph{Small Matrices with Small Inverses:
+Unimodular Zerofree Cases}, arXiv:2605.03691v4, June 12, 2026.
+\url{https://arxiv.org/abs/2605.03691v4}.
+
+\bibitem{roots}
+Steven Finch, \emph{$n$th Roots of $n$th Powers},
+arXiv:2602.17719v8, April 15, 2026.
+\url{https://arxiv.org/abs/2602.17719v8}.
+
+\bibitem{large}
+Steven Finch, \emph{Small Matrices with Large Inverses:
+Unimodular $4\times4$ Cases}, arXiv:2607.07688v4, August 17, 2026.
+First version released July 8, 2026.
+\url{https://arxiv.org/abs/2607.07688v4}.
+
+\bibitem{mse}
+S. Finch, \emph{Optimizing zerofree unimodular matrices},
+Mathematics Stack Exchange, February 24, 2026;
+answer by S. Finch, March 29, 2026.
+\url{https://math.stackexchange.com/questions/5126078}.
+
+\bibitem{higham}
+Nick Higham, \emph{What Is the Sherman--Morrison--Woodbury Formula?},
+September 29, 2020; updated November 12, 2020.
+\url{https://nhigham.com/2020/09/29/what-is-the-sherman-morrison-woodbury-formula/}.
+
+\bibitem{towse}
+Christopher Towse and Eric Campbell,
+\emph{Constructing Integer Matrices with Integer Eigenvalues},
+author-hosted manuscript dated March 25, 2016,
+Section 2, Theorem 1 and Corollaries 1--2, p.~2.
+\url{https://ericthewry.github.io/pdfs/imies.pdf}.
+\end{thebibliography}
+\smallskip
+\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}.
+\end{document}
