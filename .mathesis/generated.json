@@ -21,10 +21,10 @@
   "generator_version": "0.1.0",
   "sha256": {
     "CHANGELOG.md": "53c3870182cfc4f4febdb8dc0fd15b4038dbeaec25aab1907c838b3f873aa539",
-    "CITATION.cff": "79b0423f991373b328173a1d63648a73db8033cc56992c97afbc8b336354ae6f",
+    "CITATION.cff": "8712a57d67426a6807dacb941d0d4edd1a693208f62c15c3f7c4cc7ac33337f2",
     "CONTRIBUTING.md": "fafd66e63160b2a88f433af56d2af2b0f7bf6ed2fd417d46b54446ce07c627ff",
     "LICENSES/CC-BY-4.0.txt": "58230517b7895aa219ff46a6ed63e67057a1582fb9ea054b16728a8c13525650",
-    "README.md": "6f61d824e64e9bec7820e95f011020244291f5a8e26077ba8a9e8c7ddfa867f2",
+    "README.md": "ee754df9b90a1528b5a5da26e40d8b75a4e62c44626989a72da9ce712fbf7f94",
     "formalization/nodes.json": "98b03e22fa45eee5c6e9a3c5776b1f45235c46ed5330f749a6e9778660686a71",
     "manuscript/finch-unimodular-zerofree-six-v3/README.md": "c43c54f4864b00ea360f2d829f520be8cbc5e0d9cac5a10517423389c85f78a4",
     "manuscript/finch-unimodular-zerofree-six-v3/SHA256SUMS": "4d27a6892f3255c5c58e34ad15dbe22361702fd170608c1c109d1185818e5f9f",
@@ -34,9 +34,9 @@
     "manuscript/finch-unimodular-zerofree-six-v3/verification.json": "1dc5e6ab0c3e7316e436ecde50ce57446c6d2d21486b4a4116cd9c60eb38d1bd",
     "manuscript/finch-unimodular-zerofree-six-v3/verify.py": "3c1aaa50de817edc32656fe05a9f14e3709c26d709cb0c2c8542fa4ee3d9a351",
     "manuscript/finch-unimodular-zerofree-six-v3/witness.json": "fbcc0ccf0b9814418aa90beccb12eec5001ce2f56c12512aeb97d72cc8cbdc6e",
-    "paper.json": "42d2cdc7df024ebd832e44b5a229bc486756324d409af88de52c7534d2eb8665",
+    "paper.json": "612e206e80e861b7acdcfcece08f6a46ff80ad5a7e756742aa9a0706568a065e",
     "paper.pdf": "50418eb19da13dd26a2c79d5a21f51f120538ca56b68933b03cacfcd7cd3dd9b",
     "source.archive": "8bd66a0e051ca09a8584850f23f5bc3d222d26c6bf11b923e8099091438a8408"
   },
-  "snapshot_identity": "786345af47302ffd1dd8e35a643f8e993d9acc50d2669ddf1e759f8d9ce189b4"
+  "snapshot_identity": "1cd12252ade6acbd693395e69c9471cdbf7a7d80c775dba602c0eeac4d3e9a29"
 }

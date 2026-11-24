@@ -28,9 +28,9 @@
         "name": "Wenlin Zhang"
       }
     ],
-    "concept_doi": null,
+    "concept_doi": "10.5281/zenodo.24484818",
     "current_version": 3,
-    "doi": null,
+    "doi": "10.5281/zenodo.24484819",
     "lean_source": {
       "revision": "3ede1d0bfa6d3c063b82234699d279136b6f0c42",
       "url": "https://github.com/the-omega-institute/trureturing/blob/3ede1d0bfa6d3c063b82234699d279136b6f0c42/D5/S3/QuadraticForms/FinchBalancedZerofreeRefutation.lean"
