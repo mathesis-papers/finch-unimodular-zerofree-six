@@ -31,6 +31,7 @@
     "concept_doi": "10.5281/zenodo.24484818",
     "current_version": 3,
     "doi": "10.5281/zenodo.24484819",
+    "kind": "note",
     "lean_source": {
       "revision": "3ede1d0bfa6d3c063b82234699d279136b6f0c42",
       "url": "https://github.com/the-omega-institute/trureturing/blob/3ede1d0bfa6d3c063b82234699d279136b6f0c42/D5/S3/QuadraticForms/FinchBalancedZerofreeRefutation.lean"
@@ -55,10 +56,12 @@
     "title": "Extending Towse–Campbell's rank-one constructions: a counterexample to Finch's balanced order-six conjecture",
     "versions": [
       {
+        "changelog": null,
         "previous_version": null,
         "published_on": "2026-11-23T23:20:12.539512925Z",
         "revision": "3",
-        "version": 3
+        "version": 3,
+        "version_label": null
       }
     ],
     "work": "finch-unimodular-zerofree-six"
